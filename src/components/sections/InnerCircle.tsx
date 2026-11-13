@@ -9,6 +9,16 @@ const benefits = [
 ]
 
 export default function InnerCircle() {
+  function joinNow() {
+    document
+      .getElementById('newsletter')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    window.setTimeout(
+      () => document.getElementById('newsletter-email')?.focus(),
+      450,
+    )
+  }
+
   return (
     <section
       id="join"
@@ -40,6 +50,7 @@ export default function InnerCircle() {
 
           <button
             type="button"
+            onClick={joinNow}
             className="mt-10 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-ink transition hover:bg-gold-deep"
           >
             Become a Member
@@ -52,8 +63,7 @@ export default function InnerCircle() {
             label="Earth Tone Edit"
             className="absolute inset-0 h-full w-full"
           />
-        </div>
-      </div>
+        </div>      </div>
     </section>
   )
 }

@@ -42,7 +42,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-line bg-white">
       <div className="mx-auto max-w-7xl px-4 pt-14 pb-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 rounded-3xl border border-line bg-sand px-6 py-8 sm:px-10 lg:flex-row lg:items-center lg:justify-between">
+        <div
+          id="newsletter"
+          className="flex flex-col gap-6 rounded-3xl border border-line bg-sand px-6 py-8 sm:px-10 lg:flex-row lg:items-center lg:justify-between"
+        >
           <div>
             <h2 className="font-heading text-2xl text-ink">Stay in Touch</h2>
             <p className="mt-1.5 max-w-md text-sm text-muted">
@@ -55,6 +58,7 @@ export default function Footer() {
               <input
                 type="email"
                 required
+                id="newsletter-email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="your@email.com"
